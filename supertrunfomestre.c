@@ -1,0 +1,115 @@
+#include <stdio.h>
+
+int main(){
+
+
+    char estado1, estado2;
+    char codigo1[5], nome1[20], codigo2[5], nome2[20];
+    int populacao1, pt1, populacao2, pt2;
+    float area1, pib1, dp1, ppc1, area2, pib2, dp2, ppc2;
+    float sp1,sp2;
+    int Rpopulação = populacao1>populacao2;
+    int Rarea = area1>area2;
+    int Rpib = pib1>pib2;
+    int Rpt = pt1>pt2;
+    int Rdensidade = dp1>dp2;
+    int Rppc = ppc1>ppc2;
+    int Rsuper = sp1>sp2;
+
+
+    //desafio super trunfo nivel novato
+    //será feito apenas o cadastro das cartas e suas caracteristicas
+    
+    printf("Estado : \n");
+    scanf("%c", &estado1);
+
+    printf("Codigo: \n");
+    scanf("%s", &codigo1);
+
+    printf("Nome da cidade: \n");
+    scanf("%s", &nome1);
+
+    printf("População: \n");
+    scanf("%d", &populacao1);
+
+    printf("Area: \n");
+    scanf("%f", &area1);
+
+    printf("Pib: \n");
+    scanf("%f", &pib1);
+
+    printf("Numero de pontos turisticos: \n");
+    scanf("%d", &pt1);
+
+    //Separação de colhimento de dados das cartas
+    
+    printf("\nEstado : \n");
+    scanf(" %c", &estado2);
+
+    printf("Codigo: \n");
+    scanf("%s", &codigo2);
+
+    printf("Nome da cidade: \n");
+    scanf("%s", &nome2);
+
+    printf("População: \n");
+    scanf("%d", &populacao2);
+
+    printf("Area: \n");
+    scanf("%f", &area2);
+
+    printf("Pib: \n");
+    scanf("%f", &pib2);
+
+    printf("Numero de pontos turisticos: \n");
+    scanf("%d", &pt2);
+
+    dp1= (populacao1/area1);
+    dp2= (populacao2/area2);
+    ppc1= (pib1/populacao1);
+    ppc2= (pib2/populacao2);
+    sp1=(populacao1+area1+pib1+pt1+ppc1-dp1);
+    sp2=(populacao2+area2+pib2+pt2+ppc2-dp2);
+
+    printf("\nCarta 1\n");
+    printf("Estado: %c\n", estado1);
+    printf("Código: %s\n", codigo1);
+    printf("Nome da cidade: %s\n", nome1);
+    printf("População: %d\n", populacao1);
+    printf("Area: %f km\n",area1);
+    printf("Pib: %f bilhões de reais\n", pib1);
+    printf("Pontos turisticos: %d\n", pt1);
+    printf("Densidade populacional: %f\n",dp1);
+    printf("Pib per capita: %f\n", ppc1);
+    printf("Super poder: %.2f\n", sp1);
+
+    printf("\nCarta 2\n");
+    printf("Estado: %c\n", estado2);
+    printf("Código: %s\n", codigo2);
+    printf("Nome da cidade: %s\n", nome2);
+    printf("População: %d\n", populacao2);
+    printf("Area: %f km\n",area2);
+    printf("Pib: %f bilhões de reais\n", pib2);
+    printf("Pontos turisticos: %d\n", pt2);
+    printf("Densidade populacional: %f\n",dp2);
+    printf("Pib per capita: %f\n", ppc2);
+    printf("Super poder: %.2f\n", sp2);
+
+    //impressão da impressão dos resultados por atributos
+    printf("\n*** Duelo ***\n");
+    printf("Quando o resulto for 1 a carta 1 será a vitoriosa e quando o resultado for 0 a carta 2 ganhará...\n");
+    printf("População carta 1 > carta 2: %d\n", Rpopulação);
+    printf("Area carta 1 > carta 2: %d\n", Rarea);
+    printf("Pib carta 1 > carta 2: %d\n", Rpib);
+    printf("Pontos turisticos carta 1 > carta 2: %d\n", Rpt);
+    printf("Densidade populacional carta 1 > carta 2: %d\n", Rdensidade);
+    printf("Pib per capita carta 1 > carta 2: %d\n", Rppc);
+    printf("Super poder carta 1 > carta 2: %d\n", Rsuper);
+
+
+    return 0;
+
+
+
+
+}
