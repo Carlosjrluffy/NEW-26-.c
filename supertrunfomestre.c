@@ -68,7 +68,7 @@ int main(){
     Rarea = (area1>area2);
     Rpib = (pib1>pib2);
     Rpt = (pt1>pt2);
-    Rdensidade = (dp1>dp2);
+    Rdensidade = (dp1<dp2);
     Rppc = (ppc1>ppc2);
     Rsuper = (sp1>sp2);
 
