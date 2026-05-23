@@ -62,8 +62,10 @@ int main(){
     dp2= (populacao2/area2);
     ppc1= (pib1/populacao1);
     ppc2= (pib2/populacao2);
-    sp1=(populacao1+area1+pib1+pt1+ppc1-dp1);
-    sp2=(populacao2+area2+pib2+pt2+ppc2-dp2);
+
+    //Cálculo do super poder usando o inverso da densidade populacional(1.0/dp)
+    sp1=((float)populacao1 + area1 + pib1 + (float)pt1 + ppc1 + (1.0f / dp1));
+    sp2=((float)populacao2 + area2 + pib2 + (float)pt2 + ppc2 + (1.0f / dp2));
     Rpopulação = (populacao1>populacao2);
     Rarea = (area1>area2);
     Rpib = (pib1>pib2);
